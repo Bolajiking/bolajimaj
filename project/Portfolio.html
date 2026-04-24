@@ -46,6 +46,7 @@
 
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     body {
@@ -60,6 +61,7 @@
       letter-spacing: 0;
       -webkit-font-smoothing: antialiased;
       transition: background-color 260ms ease, color 260ms ease;
+      overflow-x: hidden;
     }
 
     body::before {
@@ -568,18 +570,36 @@
       }
 
       .nav {
-        align-items: flex-start;
+        align-items: center;
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
       }
 
       .nav-links {
-        justify-content: flex-end;
+        justify-content: center;
         flex-wrap: wrap;
+        width: 100%;
       }
 
       .nav-links a {
         min-height: 32px;
         padding: 0 8px;
         font-size: 0.68rem;
+      }
+
+      .theme-switch {
+        width: 52px;
+        height: 30px;
+      }
+
+      .theme-switch::before {
+        width: 20px;
+        height: 20px;
+      }
+
+      [data-theme="dark"] .theme-switch::before {
+        transform: translateX(22px);
       }
 
       main {
@@ -597,12 +617,38 @@
         border-radius: 14px;
       }
 
+      .hero-copy {
+        align-items: center;
+        padding: 34px 18px;
+        text-align: center;
+      }
+
+      .hero-lede,
+      .section-heading p,
+      .contact p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       h1 {
         font-size: clamp(2.7rem, 16vw, 5rem);
       }
 
+      .actions,
+      .tags,
+      .partner-list {
+        justify-content: center;
+      }
+
+      .button,
+      .tag {
+        max-width: 100%;
+        text-align: center;
+      }
+
       .section-heading {
         display: block;
+        text-align: center;
       }
 
       .section-heading p {
@@ -614,12 +660,34 @@
         grid-column: 1 / -1;
       }
 
+      .card {
+        padding: 22px 18px;
+        text-align: center;
+      }
+
+      .card h3 {
+        max-width: none;
+      }
+
       .writing-item {
+        grid-template-columns: 1fr;
+        justify-items: center;
         padding: 17px;
+        text-align: center;
       }
 
       .contact .actions {
         margin-top: 6px;
+      }
+
+      .contact,
+      .partners-panel {
+        justify-items: center;
+        text-align: center;
+      }
+
+      footer {
+        text-align: center;
       }
 
     }
