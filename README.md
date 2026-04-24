@@ -7,7 +7,7 @@ Static portfolio website for Bolaji Majiyagbe.
 This site is ready for any static host.
 
 - Entry point: `index.html`
-- Portfolio page: `project/Portfolio.html`
+- Reference copy: `project/Portfolio.html`
 - No build step required
 - No package install required
 
